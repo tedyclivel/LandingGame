@@ -11,7 +11,10 @@
     "lint:fix": "tsc --noEmit",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "start": "next start"
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "description": "Noxcipher 3D animated gaming website using React and GSAP",
   "keywords": [
@@ -57,6 +60,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@opennextjs/cloudflare": "1.20.7",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^26.6.3",
     "@types/react": "^19.2.13",
@@ -73,7 +77,8 @@
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript": "5.8.3",
+    "typescript-eslint": "^8.54.0",
+    "wrangler": "4.146.0"
   }
 }
